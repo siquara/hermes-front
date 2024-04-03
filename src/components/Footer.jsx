@@ -136,7 +136,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="lg:col-span-6 flex flex-col gap-5 mb-5 items-center sm:items-baseline">
+            <div className="lg:col-span-6 lg:col-start-8  flex flex-col gap-5 mb-5 items-center sm:items-baseline">
               <p className="flex items-center gap-2 w-full justify-between">
                 Jonathas Maciel
                 <Circle size={5} className="bg-white rounded-full" />
@@ -159,14 +159,14 @@ export function Footer() {
                 Pedro Carneiro
                 <Circle size={5} className="bg-white rounded-full" />
                 <a
-                  href="#"
+                  href="https://github.com/Pkarneiro"
                   className="border-b-[2px] border-solid border-transparent hover:border-white"
                   target="_blank"
                 >
                   <GithubLogo size={30} />
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/in/pedro-henrique-carneiro-787010257"
                   className="border-b-[2px] border-solid border-transparent hover:border-white"
                   target="_blank"
                 >
@@ -236,7 +236,8 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <a href="#">Felipe Oliveira dos Santos</a>
             <a href="#">Leia Fernandes de Assis Garcia</a>
-            <a href="#">Beatriz Siquara</a>
+            <a href="#">Stella Marys Dornelas Lamounier</a>
+            <a href="#">Edquel Bueno Prado Farias</a>
           </div>
         </div>
       </div>
