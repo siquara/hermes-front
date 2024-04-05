@@ -1,7 +1,8 @@
 import LogoAnima from "/LogoAnima.png";
 import LogoUnifacs from "/LogoUnifacs.png";
 import HermesLogoWhite from "../assets/HermesLogoWhite.svg";
-import { Circle, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import {GithubLogo } from "@phosphor-icons/react";
+import { Member } from "./Member";
 
 export function Footer() {
   return (
@@ -26,208 +27,64 @@ export function Footer() {
           <h2 className="font-[600] mb-3">Contate os Integrantes:</h2>
           <div className="lg:grid lg:grid-cols-12 gap-6">
             <div className="lg:col-span-6 flex flex-col gap-5 mb-5 items-center sm:items-baseline ">
-              <p className="flex items-center gap-2 w-full justify-between">
-                Beatriz Siquara
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/siquara"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/beatriz-siquara"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                David Freitas
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/Dvz071"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/david-freitas0801/"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                Gabriel Almeida
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/Gabriel-Gaps"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/gabriel-souza-a12078302"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
+              <Member
+                name="Beatriz Siquara"
+                githubLink="https://github.com/siquara"
+                linkedinLink="https://www.linkedin.com/in/beatriz-siquara"
+              />
+              <Member
+                name="David Freitas"
+                githubLink="https://github.com/Dvz071"
+                linkedinLink="https://www.linkedin.com/in/david-freitas0801/"
+              />
+              <Member
+                name="Gabriel Almeida"
+                githubLink="https://github.com/Gabriel-Gaps"
+                linkedinLink="https://www.linkedin.com/in/gabriel-souza-a12078302"
+              />
+              <Member
+                name="Ian Freire Borges"
+                githubLink="https://github.com/ian-Freire-Borges"
+                linkedinLink="https://linkedin.com/in/ian-borges-796458294"
+              />
+              <Member
+                name="Irvin M. Moura"
+                githubLink="https://github.com/IrvinMoura"
+                linkedinLink="https://www.linkedin.com/in/irvinmarques/"
+              />
 
-              <p className="flex items-center gap-2 w-full justify-between">
-                Ian Freire Borges
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/ian-Freire-Borges"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/ian-borges-796458294"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                Irvin M. Moura
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/IrvinMoura"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/irvinmarques/"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                Isabelle Maciel
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/isabelle1maciel"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/isabelle-maciel-a60563301"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
+              <Member
+                name="Isabelle Maciel"
+                githubLink="https://github.com/isabelle1maciel"
+                linkedinLink="https://www.linkedin.com/in/isabelle-maciel-a60563301"
+              />
             </div>
             <div className="lg:col-span-6 lg:col-start-8  flex flex-col gap-5 mb-5 items-center sm:items-baseline">
-              <p className="flex items-center gap-2 w-full justify-between">
-                Jonathas Maciel
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/jonz1n"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/jonathasmacielsantos"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                Pedro Carneiro
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/Pkarneiro"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/pedro-henrique-carneiro-787010257"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                Rafael Teixeira
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/Rafaeltqc"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/rafael-teixeira-queiroz-de-carvalho-02b805289/?original_referer="
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-
-              <p className="flex items-center gap-2 w-full justify-between">
-                Victor M. Alves
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/victormssa"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/victor-manoel-soares-silva-alves/"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
-              <p className="flex items-center gap-2 w-full justify-between">
-                Vitoria Cardoso
-                <Circle size={5} className="bg-white rounded-full" />
-                <a
-                  href="https://github.com/vitoriacardoso05"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <GithubLogo size={30} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/vitoria-cardoso-595b23160/"
-                  className="border-b-[2px] border-solid border-transparent hover:border-white"
-                  target="_blank"
-                >
-                  <LinkedinLogo size={30} />
-                </a>
-              </p>
+              <Member
+                name="Jonathas Maciel"
+                githubLink="https://github.com/jonz1n"
+                linkedinLink="https://www.linkedin.com/in/jonathasmacielsantos"
+              />
+              <Member
+                name="Pedro Carneiro"
+                githubLink="https://github.com/Pkarneiro"
+                linkedinLink="https://linkedin.com/in/pedro-henrique-carneiro-787010257"
+              />
+              <Member
+                name="Rafael Teixeira"
+                githubLink="https://github.com/Rafaeltqc"
+                linkedinLink="https://www.linkedin.com/in/rafael-teixeira-queiroz-de-carvalho-02b805289/?original_referer="
+              />
+              <Member
+                name="Victor M. Alves"
+                githubLink="https://github.com/victormssa"
+                linkedinLink="https://www.linkedin.com/in/victor-manoel-soares-silva-alves/"
+              />
+              <Member
+                name="Vitoria Cardoso"
+                githubLink="https://github.com/vitoriacardoso05"
+                linkedinLink="https://www.linkedin.com/in/vitoria-cardoso-595b23160/"
+              />
             </div>
           </div>
         </div>
