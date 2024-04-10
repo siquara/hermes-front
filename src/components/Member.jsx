@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Circle, GithubLogo,LinkedinLogo } from "@phosphor-icons/react";
+
 export function Member({name, githubLink, linkedinLink}){
     return (
     <p className="flex items-center gap-2 w-full justify-between">
@@ -27,4 +28,4 @@ Member.propTypes = {
     name: PropTypes.string.isRequired,
     githubLink: PropTypes.string.isRequired,
     linkedinLink: PropTypes.string.isRequired,
-  };
+};
