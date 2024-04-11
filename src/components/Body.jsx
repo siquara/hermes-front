@@ -36,7 +36,6 @@ export function Body() {
           })}
         </div>
       </div>
-
     </div>
   );
 }
