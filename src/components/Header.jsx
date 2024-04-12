@@ -1,4 +1,5 @@
-import hermesLogo from "../assets/hermesLogo.svg";
+import React from 'react';
+import hermesLogo from "/assets/hermesLogo.svg";
 
 export function Header() {
   return (

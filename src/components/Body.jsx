@@ -6,7 +6,7 @@ import "keen-slider/keen-slider.min.css";
 
 export function Body() {   
   const [sliderRef] = useKeenSlider({
-    loop: true,
+    loop: false,
     mode: "free-snap",
     slides: {
       perView: "auto",
