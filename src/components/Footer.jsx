@@ -1,3 +1,4 @@
+import React from "react";
 import LogoUnifacs from "/LogoUnifacs.png";
 import LogoAnima from "../../public/LogoAnima.png";
 import HermesLogoWhite from "/assets/HermesLogoWhite.svg";
