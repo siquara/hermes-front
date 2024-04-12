@@ -1,9 +1,9 @@
-import React from 'react';
 import LogoUnifacs from "/LogoUnifacs.png";
 import LogoAnima from "../../public/LogoAnima.png";
 import HermesLogoWhite from "/assets/HermesLogoWhite.svg";
 import {GithubLogo } from "@phosphor-icons/react";
 import { Member } from "./Member";
+import { members1, members2 } from "../utils/data/members";
 
 export function Footer() {
   return (
@@ -28,64 +28,26 @@ export function Footer() {
           <h2 className="font-[600] mb-3">Contate os Integrantes:</h2>
           <div className="lg:grid lg:grid-cols-12 gap-6">
             <div className="lg:col-span-6 flex flex-col gap-5 mb-5 items-center sm:items-baseline ">
+            {members1.map((filter, index) => {
+            return (
               <Member
-                name="Beatriz Siquara"
-                githubLink="https://github.com/siquara"
-                linkedinLink="https://www.linkedin.com/in/beatriz-siquara"
+              key={index}                 
+              name={filter.name}
+              githubLink={filter.githubLink}
+              linkedinLink={filter.linkedinLink}
               />
-              <Member
-                name="David Freitas"
-                githubLink="https://github.com/Dvz071"
-                linkedinLink="https://www.linkedin.com/in/david-freitas0801/"
-              />
-              <Member
-                name="Gabriel Almeida"
-                githubLink="https://github.com/Gabriel-Gaps"
-                linkedinLink="https://www.linkedin.com/in/gabriel-souza-a12078302"
-              />
-              <Member
-                name="Ian Freire Borges"
-                githubLink="https://github.com/ian-Freire-Borges"
-                linkedinLink="https://linkedin.com/in/ian-borges-796458294"
-              />
-              <Member
-                name="Irvin M. Moura"
-                githubLink="https://github.com/IrvinMoura"
-                linkedinLink="https://www.linkedin.com/in/irvinmarques/"
-              />
-
-              <Member
-                name="Isabelle Maciel"
-                githubLink="https://github.com/isabelle1maciel"
-                linkedinLink="https://www.linkedin.com/in/isabelle-maciel-a60563301"
-              />
+            ); })}
             </div>
             <div className="lg:col-span-6 lg:col-start-8  flex flex-col gap-5 mb-5 items-center sm:items-baseline">
+            {members2.map((filter, index) => {
+            return (
               <Member
-                name="Jonathas Maciel"
-                githubLink="https://github.com/jonz1n"
-                linkedinLink="https://www.linkedin.com/in/jonathasmacielsantos"
+              key={index}                 
+              name={filter.name}
+              githubLink={filter.githubLink}
+              linkedinLink={filter.linkedinLink}
               />
-              <Member
-                name="Pedro Carneiro"
-                githubLink="https://github.com/Pkarneiro"
-                linkedinLink="https://linkedin.com/in/pedro-henrique-carneiro-787010257"
-              />
-              <Member
-                name="Rafael Teixeira"
-                githubLink="https://github.com/Rafaeltqc"
-                linkedinLink="https://www.linkedin.com/in/rafael-teixeira-queiroz-de-carvalho-02b805289/?original_referer="
-              />
-              <Member
-                name="Victor M. Alves"
-                githubLink="https://github.com/victormssa"
-                linkedinLink="https://www.linkedin.com/in/victor-manoel-soares-silva-alves/"
-              />
-              <Member
-                name="Vitoria Cardoso"
-                githubLink="https://github.com/vitoriacardoso05"
-                linkedinLink="https://www.linkedin.com/in/vitoria-cardoso-595b23160/"
-              />
+            ); })}
             </div>
           </div>
         </div>
