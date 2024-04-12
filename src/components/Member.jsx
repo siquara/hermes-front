@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Circle, GithubLogo,LinkedinLogo } from "@phosphor-icons/react";
 export function Member({name, githubLink, linkedinLink}){

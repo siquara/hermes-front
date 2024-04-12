@@ -1,6 +1,7 @@
-import LogoAnima from "/LogoAnima.png";
+import React from 'react';
 import LogoUnifacs from "/LogoUnifacs.png";
-import HermesLogoWhite from "../assets/HermesLogoWhite.svg";
+import LogoAnima from "../../public/LogoAnima.png";
+import HermesLogoWhite from "/assets/HermesLogoWhite.svg";
 import {GithubLogo } from "@phosphor-icons/react";
 import { Member } from "./Member";
 

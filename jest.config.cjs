@@ -2,10 +2,11 @@ module.exports = {
     testEnvironment: 'jest-environment-jsdom',
     transform: {
       '\\.(js|jsx|ts|tsx)': 'babel-jest',
-      '\\.(svg)$': '<rootDir>/svgTransform.js', // adiciona esta linha
+      '\\.(svg)$': '<rootDir>/svgTransform.js',
     },
     moduleNameMapper: {
       '\\.(svg)$': '<rootDir>/src/__mocks__/svgMock.js',
+      '\\.(png)$': '<rootDir>/src/__mocks__/pngMock.js',
     },
     moduleFileExtensions: ['js', 'jsx'],
     testMatch: ['<rootDir>/src/__tests__/**/*.test.(js|jsx)'],
