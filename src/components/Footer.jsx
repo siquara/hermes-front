@@ -9,7 +9,7 @@ import { members1, members2 } from "../utils/data/members";
 export function Footer() {
   return (
     <div className="bg-secondary text-white flex flex-col justify-between ">
-      <div className="mt-[60px] mx-auto max-w-7xl px-6 w-full lg:mx-auto grid grid-cols-12 lg:items-start">
+      <div className="mt-[60px] mx-auto max-w-7xl px-6 w-full grid grid-cols-12 lg:items-start">
         <div className=" col-span-12 sm:col-span-12 lg:col-span-5 flex items-center justify-center flex-col mb-6">
           <img
             src={HermesLogoWhite}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Card from "./Card";
+import { Card } from "./Card";
 import { Button } from "./Button";
 import { filterData } from "../utils/data/filter";
 import { useKeenSlider } from "keen-slider/react";
@@ -18,9 +18,8 @@ export function Body() {
   const [activeFilter, setActiveFilter] = React.useState(filterData[0]);
 
   return (
-    <div className="bg-white min-h-screen relative">
-      <div className="absolute top-0 left-0 right-0 z-10 top-[-110px]">
-        <div className="transform -translate-y-[40px]">
+    <div className="bg-white relative">
+        <div className=" z-10 transform -translate-y-[40px]">
           <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
             {filterData.map((filter, index) => (
               <div key={index} className="keen-slider__slide min-w-fit max-w-fit">
@@ -34,13 +33,25 @@ export function Body() {
             ))}
           </div>
         </div>
-      </div>
-      <div className="container mx-auto px-4 pb-8 relative z-0 mt-28">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-10"> 
-          {Array.from({ length: 10 }).map((_, index) => (
-            <Card key={index} />
-          ))}
-        </div>
+      <div className=" flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
+        <Card 
+        title="Trello" 
+        description="Ferramenta visual que possibilita ao time o gerenciamento de qualquer tipo de projeto, fluxo de trabalho ou monitoramento de tarefas" 
+        image="../public/assets/Cards/trello.png" 
+        link="https://trello.com/pt-BR" 
+        />
+        <Card 
+        title="Asana" 
+        description="Asana é uma ferramenta para gerenciamento de projetos, tarefas e equipes. Sua função é tornar o cotidiano dos usuários mais produtivo ao centralizar tudo em um único app." 
+        image="../public/assets/Cards/asana.png" 
+        link="https://asana.com/pt?noredirect=" 
+        />
+        <Card 
+        title="Jira" 
+        description="O Jira é um software de gerenciamento de projetos desenvolvido pela Atlassian. Esse software reúne todas as funcionalidades necessárias para o controle e organização de diferentes tipos de projetos, equipes e ambientes de desenvolvimento." 
+        image="../public/assets/Cards/jira.png" 
+        link="https://www.atlassian.com/software/jira" 
+        />
       </div>
     </div>
   );

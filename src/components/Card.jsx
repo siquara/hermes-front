@@ -1,22 +1,30 @@
-function Card() {
+import { ArrowRight } from '@phosphor-icons/react';
+import PropTypes from 'prop-types';
+export function Card({ title, description, image, link}) {
     return (
-        <div className="bg-neutral-300 shadow-md rounded-3xl p-6 transition duration-300 ease-in-out transform hover:bg-stone-50 hover:shadow-black mb-10 max-w-lg mx-auto h-86">
+        <div className="bg-[#ededed] md:bg-[#f5f5f5] shadow-md rounded-3xl py-12 px-9 xs400:px-12 transition duration-300 ease-in-out transform hover:bg-white mb-10 max-w-lg h-86 hover:shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)]">
             <div>
                 <div className="flex items-center gap-2">
-                    <img src="https://via.placeholder.com/50" alt="" /> 
-                    <h1 className="text-4xl font-bold">Azanes</h1> 
+                    <img src={image} className='max-w-[200px]'/> 
                 </div>
-                <p className="text-black text-base mt-12 break-all">
-                    O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta.
-                    1 Coríntios 13:4-7
+                <h1 className="text-4xl font-bold mt-5 text-secondary">{title}</h1> 
+                <p className="text-secondary text-base mt-5 hyphens-auto text-justify " >
+                    {description}
                 </p>
             </div>
             <div className="flex justify-center items-center mt-4">
-            <button className="bg-blue-950 hover:bg-white hover:text-black hover:border hover:border-black text-white font-bold py-2 px-20 rounded-tr-3xl rounded-bl-2xl  border-blue-700">Acesse aqui</button>
+            <a href={link} target="_blank" className="flex gap-4 bg-secondary hover:bg-white hover:cursor-pointer hover:text-secondary hover:border hover:border-secondary text-white font-bold py-2 px-5 xs400:px-10 rounded-tr-3xl rounded-bl-2xl transition-all duration-300 ease-in-out">
+                Acesse aqui
+                <ArrowRight size={24} />
+            </a>
             </div>
         </div>
     );
 }
 
-export default Card;
-
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+};
