@@ -27,6 +27,6 @@ describe('Header Component', () => {
     const imagemElement = screen.getByRole('img', { name: /Logotipo do Hermes/i });
 
     // Verifica se a classe CSS está correta para telas de médio porte
-    expect(imagemElement).toHaveClass('md:max-w-[100%]');
+    expect(imagemElement).toHaveClass('lg:max-w-[100%]');
   });
 });
