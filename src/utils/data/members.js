@@ -1,10 +1,5 @@
 export const members1 = [
     {
-        name: "Beatriz Siquara",
-        githubLink:"https://github.com/siquara",
-        linkedinLink:"https://www.linkedin.com/in/beatriz-siquara"
-    },
-    {
         name: "David Freitas",
         githubLink:"https://github.com/Dvz071",
         linkedinLink:"https://www.linkedin.com/in/david-freitas0801/"
@@ -15,24 +10,10 @@ export const members1 = [
         linkedinLink:"https://www.linkedin.com/in/gabriel-souza-a12078302"
     },
     {
-        name: "Ian Freire Borges",
-        githubLink:"https://github.com/ian-Freire-Borges",
-        linkedinLink:"https://linkedin.com/in/ian-borges-796458294"
-    },
-    {
-        name: "Irvin M. Moura",
-        githubLink:"https://github.com/IrvinMoura",
-        linkedinLink:"https://www.linkedin.com/in/irvinmarques/"
-    },
-    {
         name: "Isabelle Maciel",
         githubLink:"https://github.com/isabelle1maciel",
         linkedinLink:"https://www.linkedin.com/in/isabelle-maciel-a60563301"
-    }
-]
-
-
-export const members2 = [
+    },
     {
         name: "Jonathas Maciel",
         githubLink:"https://github.com/jonz1n",
@@ -49,13 +30,34 @@ export const members2 = [
         linkedinLink:"https://www.linkedin.com/in/rafael-teixeira-queiroz-de-carvalho-02b805289/?original_referer"
     },
     {
-        name: "Victor M. Alves",
-        githubLink:"https://github.com/victormssa",
-        linkedinLink:"https://www.linkedin.com/in/victor-manoel-soares-silva-alves/"
-    },
-    {
         name: "Vitoria Cardoso",
         githubLink:"https://github.com/vitoriacardoso05",
         linkedinLink:"https://www.linkedin.com/in/vitoria-cardoso-595b23160/"
     }
 ]
+
+export const members2 = [
+    {
+        name: "Beatriz Siquara",
+        githubLink:"https://github.com/siquara",
+        linkedinLink:"https://www.linkedin.com/in/beatriz-siquara"
+    },
+    {
+        name: "Ian Freire Borges",
+        githubLink:"https://github.com/ian-Freire-Borges",
+        linkedinLink:"https://linkedin.com/in/ian-borges-796458294"
+    },
+    {
+        name: "Irvin M. Moura",
+        githubLink:"https://github.com/IrvinMoura",
+        linkedinLink:"https://www.linkedin.com/in/irvinmarques/"
+    },
+    {
+        name: "Victor M. Alves",
+        githubLink:"https://github.com/victormssa",
+        linkedinLink:"https://www.linkedin.com/in/victor-manoel-soares-silva-alves/"
+    },
+
+]
+
+

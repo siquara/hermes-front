@@ -26,9 +26,9 @@ export function Footer() {
           </a>
         </div>
         <div className=" flex flex-col items-center lg:items-baseline col-span-12 sm:col-span-6 lg:col-span-7 pb-5 sm:pb-0">
-          <h2 className="font-[600] mb-3">Contate os Integrantes:</h2>
           <div className="lg:grid lg:grid-cols-12 gap-6">
             <div className="lg:col-span-6 flex flex-col gap-5 mb-5 items-center sm:items-baseline ">
+              <h2 className="font-[600] text-lg">Documentação:</h2>
             {members1.map((filter, index) => {
             return (
               <Member
@@ -40,6 +40,7 @@ export function Footer() {
             ); })}
             </div>
             <div className="lg:col-span-6 lg:col-start-8  flex flex-col gap-5 mb-5 items-center sm:items-baseline">
+            <h2 className="font-[600] text-lg">Desenvolvedores:</h2>
             {members2.map((filter, index) => {
             return (
               <Member
@@ -53,7 +54,7 @@ export function Footer() {
           </div>
         </div>
         <div className=" flex flex-col items-center lg:items-baseline col-span-12 sm:col-span-6 lg:col-start-6 lg:mb-5 pb-5 sm:pb-0 ">
-          <h2 className="font-[600] mb-3">Professores:</h2>
+          <h2 className="font-[600] mb-3 text-lg">Professores:</h2>
           <div className="flex flex-col gap-5">
             <a href="#">Felipe Oliveira dos Santos</a>
             <a href="#">Leia Fernandes de Assis Garcia</a>
