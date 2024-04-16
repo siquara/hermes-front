@@ -6,6 +6,7 @@ import {GithubLogo } from "@phosphor-icons/react";
 import { Member } from "./Member";
 import { members1, members2 } from "../utils/data/members";
 
+
 export function Footer() {
   return (
     <div className="bg-secondary text-white flex flex-col justify-between ">
