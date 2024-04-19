@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'; // Importa as funções de matcher estendidas
+import '@testing-library/jest-dom';
 import { Header } from '../components/Header';
 
 describe('Header Component', () => {
-  test('renderiza corretamente', () => {
+  it('renderiza corretamente', () => {
     // Renderiza o componente Header
     render(<Header />);
 
@@ -16,7 +16,7 @@ describe('Header Component', () => {
     expect(imagemElement).toHaveClass('max-w-[80%]');
   });
 
-  test('redimensiona a imagem corretamente em telas de médio porte', () => {
+  it('redimensiona a imagem corretamente em telas de médio porte', () => {
     // Ajusta a largura da janela para simular uma tela de médio porte
     global.innerWidth = 768;
 

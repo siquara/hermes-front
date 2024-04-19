@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'; // Importa as funções de matcher estendida
 import { Footer } from '../components/Footer';
 
 describe('Footer Component', ()=>{
-    test('Renderiza Corretamente', () => {
+    it('Renderiza Corretamente', () => {
 
         render(<Footer />);
 
