@@ -10,5 +10,5 @@ describe('Footer Component', ()=>{
 
         const imagemElement = screen.getByRole('img', { name: /Hermes Logo/i });
         expect(imagemElement).toBeInTheDocument();
-    })
-})
+    });
+});
