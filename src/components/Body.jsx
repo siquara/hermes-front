@@ -3,8 +3,8 @@ import { Card } from "./Card";
 import { Button } from "./Button";
 import { filterData } from "../utils/data/filter";
 import { useKeenSlider } from "keen-slider/react";
-import { cards } from "../utils/data/cards";
 import "keen-slider/keen-slider.min.css";
+import { cards } from "../utils/data/cards";
 
 export function Body() {
   const [sliderRef] = useKeenSlider({
