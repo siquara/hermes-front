@@ -2,7 +2,7 @@ import React from "react";
 import LogoUnifacs from "/LogoUnifacs.png";
 import LogoAnima from "../../public/LogoAnima.png";
 import HermesLogoWhite from "/assets/HermesLogoWhite.svg";
-import {GithubLogo } from "@phosphor-icons/react";
+import { GithubLogo } from "@phosphor-icons/react";
 import { Member } from "./Member";
 import { members1, members2 } from "../utils/data/members";
 
@@ -30,27 +30,29 @@ export function Footer() {
           <div className="lg:grid lg:grid-cols-12 gap-6">
             <div className="lg:col-span-6 flex flex-col gap-5 mb-5 items-center sm:items-baseline ">
               <h2 className="font-[600] text-lg">Documentação:</h2>
-            {members1.map((filter, index) => {
-            return (
-              <Member
-              key={index}                 
-              name={filter.name}
-              githubLink={filter.githubLink}
-              linkedinLink={filter.linkedinLink}
-              />
-            ); })}
+              {members1.map((filter, index) => {
+                return (
+                  <Member
+                    key={index}
+                    name={filter.name}
+                    githubLink={filter.githubLink}
+                    linkedinLink={filter.linkedinLink}
+                  />
+                );
+              })}
             </div>
             <div className="lg:col-span-6 lg:col-start-8  flex flex-col gap-5 mb-5 items-center sm:items-baseline">
-            <h2 className="font-[600] text-lg">Desenvolvedores:</h2>
-            {members2.map((filter, index) => {
-            return (
-              <Member
-              key={index}                 
-              name={filter.name}
-              githubLink={filter.githubLink}
-              linkedinLink={filter.linkedinLink}
-              />
-            ); })}
+              <h2 className="font-[600] text-lg">Desenvolvedores:</h2>
+              {members2.map((filter, index) => {
+                return (
+                  <Member
+                    key={index}
+                    name={filter.name}
+                    githubLink={filter.githubLink}
+                    linkedinLink={filter.linkedinLink}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
