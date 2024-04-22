@@ -6,7 +6,7 @@ export function Card({ title, description, image, link }) {
         <div data-testid="card" className="flex flex-col bg-[#ededed] md:bg-[#f5f5f5] shadow-md rounded-3xl py-12 px-9 xs400:px-12 transition duration-300 ease-in-out transform hover:bg-white mb-10 max-w-lg h-86 hover:shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)]">
             <div data-testid="card_conteudo" className='mb-4'>
                 <div className="flex items-center gap-2">
-                    <img data-testid="card_conteudo_imagem" src={image} className='min-h-5 max-w-[300px]' />
+                    <img data-testid="card_conteudo_imagem" src={image} className='min-h-5' />
                 </div>
                 <h1 data-testid="card_conteudo_titulo" className="text-3xl font-bold mt-5 text-secondary">{title}</h1>
                 <p data-testid="card_conteudo_descricao" className="text-secondary text-base mt-5 hyphens-auto text-justify " >
