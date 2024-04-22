@@ -4,7 +4,7 @@ import { Circle, GithubLogo,LinkedinLogo } from "@phosphor-icons/react";
 
 export function Member({name, githubLink, linkedinLink}){
     return (
-    <p className="flex items-center gap-2 w-full justify-between">
+    <p className="flex items-center gap-3 w-full justify-between ">
         {name}
         <Circle size={5} className="bg-white rounded-full" />
         <a

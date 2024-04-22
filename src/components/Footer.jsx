@@ -25,36 +25,53 @@ export function Footer() {
             <GithubLogo size={35} />
             Acesse Aqui o Repositório
           </a>
+          <div className="flex flex-col gap-5 mt-5 mb-5 ">
+            <h2 className="font-[600] text-lg text-center">Desenvolvedores:</h2>
+              {members2.map((filter, index) => {
+              return (
+                <Member
+                key={index}                 
+                name={filter.name}
+                githubLink={filter.githubLink}
+                linkedinLink={filter.linkedinLink}
+                />
+              ); })}
+          </div>
         </div>
-        <div className=" flex flex-col items-center lg:items-baseline col-span-12 sm:col-span-6 lg:col-span-7 pb-5 sm:pb-0">
-          <div className="lg:grid lg:grid-cols-12 gap-6">
-            <div className="lg:col-span-6 flex flex-col gap-5 mb-5 items-center sm:items-baseline ">
-              <h2 className="font-[600] text-lg">Documentação:</h2>
-            {members1.map((filter, index) => {
-            return (
-              <Member
-              key={index}                 
-              name={filter.name}
-              githubLink={filter.githubLink}
-              linkedinLink={filter.linkedinLink}
-              />
-            ); })}
+        <div className=" flex flex-col items-center lg:items-baseline col-span-12 sm:col-span-12 lg:col-span-7 pb-5 sm:pb-0">
+          <div className="sm:grid sm:grid-cols-12 gap-6">
+            <div className="sm:col-span-6 lg:col-span-6 flex flex-col gap-5 mb-5 ">
+              <h2 className="font-[600] text-lg text-center">Documentação:</h2>
+              {members1.map((filter, index) => {
+              return (
+                <Member
+                key={index}                 
+                name={filter.name}
+                githubLink={filter.githubLink}
+                linkedinLink={filter.linkedinLink}
+                />
+              ); })}
             </div>
-            <div className="lg:col-span-6 lg:col-start-8  flex flex-col gap-5 mb-5 items-center sm:items-baseline">
-            <h2 className="font-[600] text-lg">Desenvolvedores:</h2>
-            {members2.map((filter, index) => {
-            return (
-              <Member
-              key={index}                 
-              name={filter.name}
-              githubLink={filter.githubLink}
-              linkedinLink={filter.linkedinLink}
-              />
-            ); })}
+            <div className="sm:col-span-6 lg:col-span-6 lg:col-start-8 flex flex-col gap-5 mb-5">
+                <h2 className="font-[600] text-lg text-center">Professores:</h2>
+                <a href="#">Felipe Oliveira dos Santos</a>
+                <a href="#">Leia Fernandes de Assis Garcia</a>
+                <a href="#">Stella Marys Dornelas Lamounier</a>
+                <a href="#">Edquel Bueno Prado Farias</a>
+              {/* <h2 className="font-[600] text-lg">Desenvolvedores:</h2>
+              {members2.map((filter, index) => {
+              return (
+                <Member
+                key={index}                 
+                name={filter.name}
+                githubLink={filter.githubLink}
+                linkedinLink={filter.linkedinLink}
+                />
+              ); })} */}
             </div>
           </div>
         </div>
-        <div className=" flex flex-col items-center lg:items-baseline col-span-12 sm:col-span-6 lg:col-start-6 lg:mb-5 pb-5 sm:pb-0 ">
+        {/* <div className="flex flex-col items-center lg:items-baseline col-span-12 sm:col-span-6 lg:col-start-6 lg:mb-5 pb-5 sm:pb-0 ">
           <h2 className="font-[600] mb-3 text-lg">Professores:</h2>
           <div className="flex flex-col gap-5">
             <a href="#">Felipe Oliveira dos Santos</a>
@@ -62,7 +79,7 @@ export function Footer() {
             <a href="#">Stella Marys Dornelas Lamounier</a>
             <a href="#">Edquel Bueno Prado Farias</a>
           </div>
-        </div>
+        </div> */}
       </div>
       <footer className="border-t flex flex-col md:flex-row justify-between items-center py-[24px] px-[120px]">
         <div className="font-[600]">UNIVERSIDADE:</div>

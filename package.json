@@ -11,8 +11,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@phosphor-icons/react": "^2.1.4",
     "keen-slider": "^6.8.6",
     "react": "^18.2.0",
