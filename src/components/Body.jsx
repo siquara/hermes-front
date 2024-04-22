@@ -1,18 +1,46 @@
 import * as React from "react";
+import { useState } from "react";
 import { Card } from "./Card";
 import { Button } from "./Button";
 import { filterData } from "../utils/data/filter";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { cards } from "../utils/data/cards";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+
+function Arrow(props) {
+  const disabled = props.disabled ? " arrow--disabled" : "";
+  return props.left ? (
+    <CaretLeft
+      size={50}
+      onClick={props.onClick}
+      className={` text-secondary mt-5 cursor-pointer border-y-4 border-transparent hover:border-none arrow arrow--left ${disabled}`}
+    />
+  ) : (
+    <CaretRight
+      size={50}
+      onClick={props.onClick}
+      className={`text-secondary mt-5 cursor-pointer border-y-4 border-transparent hover:border-none  arrow arrow--right ${disabled}`}
+    />
+  );
+}
 
 export function Body() {
-  const [sliderRef] = useKeenSlider({
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider({
     loop: false,
-    mode: "free-snap",
+    mode: "snap",
     slides: {
       perView: "auto",
       spacing: 12,
+    },
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
     },
   });
 
@@ -26,8 +54,8 @@ export function Body() {
   }
 
   return (
-    <div className="bg-white relative">
-      <div className=" z-10 transform -translate-y-[40px]">
+    <div className="bg-white relative ">
+      <div className="navigation-wrapper z-10 transform -translate-y-[40px]">
         <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
           {filterData.map((filter, index) => (
             <div key={index} className="keen-slider__slide min-w-fit max-w-fit">
@@ -40,9 +68,31 @@ export function Body() {
             </div>
           ))}
         </div>
+        <div className="flex gap-10 items-center justify-center">
+          {loaded && instanceRef.current && (
+            <>
+              <Arrow
+                left
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+                disabled={currentSlide === 0}
+              />
+
+              <Arrow
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.next()
+                }
+                disabled={
+                  currentSlide ===
+                  instanceRef.current.track.details.slides.length - 1
+                }
+              />
+            </>
+          )}
+        </div>
       </div>
       <div className=" flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
-
         {
           activeCards.map((filter, index) => {
             return (
