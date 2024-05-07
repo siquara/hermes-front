@@ -53,10 +53,10 @@ export function Body() {
   const [activeCards, setActiveCards] = React.useState(allCards);
 
   function handleChangeActiveCard(filter) {
-    if(filter.id === "todasAsFerramentas") {
+    if (filter.id === "todasAsFerramentas") {
       setActiveFilter(filter.title)
       setActiveCards(allCards)
-    }else{
+    } else {
       setActiveFilter(filter.title)
       setActiveCards(cards[filter.id]);
     }
