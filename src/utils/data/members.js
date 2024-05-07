@@ -1,10 +1,5 @@
 export const members1 = [
     {
-        name: "David Freitas",
-        githubLink: "https://github.com/Dvz071",
-        linkedinLink: "https://www.linkedin.com/in/david-freitas0801/"
-    },
-    {
         name: "Gabriel Almeida",
         githubLink: "https://github.com/Gabriel-Gaps",
         linkedinLink: "https://www.linkedin.com/in/gabriel-souza-a12078302"
