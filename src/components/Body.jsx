@@ -24,6 +24,11 @@ function Arrow(props) {
     />
   );
 }
+const allCards = [];
+for (let key in cards) {
+  allCards.push(...cards[key]);
+}
+allCards.sort((a, b) => a.title.localeCompare(b.title));
 
 export function Body() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -45,12 +50,16 @@ export function Body() {
   });
 
   const [activeFilter, setActiveFilter] = React.useState(filterData[0].title);
-
-  const [activeCards, setActiveCards] = React.useState(cards[filterData[0].id]);
+  const [activeCards, setActiveCards] = React.useState(allCards);
 
   function handleChangeActiveCard(filter) {
-    setActiveFilter(filter.title)
-    setActiveCards(cards[filter.id]);
+    if (filter.id === "todasAsFerramentas") {
+      setActiveFilter(filter.title)
+      setActiveCards(allCards)
+    } else {
+      setActiveFilter(filter.title)
+      setActiveCards(cards[filter.id]);
+    }
   }
 
   return (

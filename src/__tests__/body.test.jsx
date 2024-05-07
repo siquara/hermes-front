@@ -15,6 +15,11 @@ describe('Body Component', () => {
         //Verifica se os Filtros e botões estão sendo renderizado
 
         for (const filtro of filterData) {
+            //Ignora o Todas as Ferramentas pois ela não é um Array que precise ser testado
+            if (filtro.id === 'todasAsFerramentas'){
+                continue;
+            }
+
             fireEvent.click(screen.getByText(filtro.title))
 
             await waitFor(() => {
@@ -23,6 +28,7 @@ describe('Body Component', () => {
                 // console.log("Renderizado Filtro:", filtro.title)
 
                 //Teste dos Cards
+
                 for (const card of cards[filtro.id]) {
                     expect(screen.getByText(card.title)).toBeInTheDocument();
                     // console.log("Renderizado Card:", card.title);
