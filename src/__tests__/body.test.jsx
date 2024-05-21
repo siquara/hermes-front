@@ -20,7 +20,8 @@ describe('Body Component', () => {
                 continue;
             }
 
-            fireEvent.click(screen.getByText(filtro.title))
+            fireEvent.click(screen.getByRole('button', { name: filtro.title }));
+            // console.log(filtro.title)
 
             await waitFor(() => {
                 //Teste dos Filtros
