@@ -24,9 +24,15 @@ function Arrow(props) {
     />
   );
 }
+
 const allCards = [];
-for (let key in cards) {
-  allCards.push(...cards[key]);
+for (let category in cards) {
+  const categoryObject = filterData.find(filter => filter.id === category);
+  const cardsInCategory = cards[category].map(card => ({
+    ...card,
+    category: categoryObject ? categoryObject.title : category,
+  }));
+  allCards.push(...cardsInCategory);
 }
 allCards.sort((a, b) => a.title.localeCompare(b.title));
 
@@ -111,6 +117,7 @@ export function Body() {
                 description={filter.description}
                 image={filter.image}
                 link={filter.link}
+                category={filter.category}
               />
             );
           })
