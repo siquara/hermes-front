@@ -12,6 +12,9 @@ export function Hero() {
           <h1 className="text-white text-4xl lg:text-5xl font-[700]">
             Encontre as Ferramentas ideais para você
           </h1>
+          <div className="mt-[2rem]">
+            <input id="searchComponent" className="p-[0.5rem] text-start pl-4 w-[25rem] rounded-[4rem] border-none focus:outline-none focus:ring-[1px] focus:ring-[black]" placeholder="Pesquisar Ferramentas"></input>
+          </div>
         </div>
         <div className="lg:col-span-5 place-self-center">
           <img
