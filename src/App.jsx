@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Body } from "./components/Body";
 // import { Button } from "./components/Button";
 import { Footer } from "./components/Footer";
@@ -8,11 +9,12 @@ import "./style/global.css";
 
 export function App() {
 
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div>
       <Header />
-      <Hero />
-      <Body />
+      <Hero searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      <Body searchTerm={searchTerm}/>
       <Footer />
     </div>
   )
