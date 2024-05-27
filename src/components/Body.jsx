@@ -68,7 +68,7 @@ export function Body({ searchTerm }) {
     }
   }
 
-  
+
   useEffect(() => {
     if (typeof searchTerm !== "undefined" && searchTerm !== "") {
       const filteredCards = allCards.filter((card) =>
@@ -121,16 +121,20 @@ export function Body({ searchTerm }) {
         </div>
       </div>
       <div className="flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
-        {activeCards.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            description={card.description}
-            image={card.image}
-            link={card.link}
-            category={card.category}
-          />
-        ))}
+        {activeCards.length === 0 ? (
+          <div className="font-[600] flex items-center justify-center break-words h-[80px] px-[45px] mx-[7px] my-[2rem] text-[2rem] text-secondary">Ferramenta não encontrada</div>
+        ) : (
+          activeCards.map((card, index) => (
+            <Card
+              key={index}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+              link={card.link}
+              category={card.category}
+            />
+          ))
+        )}
       </div>
     </div>
   );
