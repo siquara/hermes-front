@@ -10,11 +10,6 @@ export const members1 = [
         linkedinLink: "https://www.linkedin.com/in/isabelle-maciel-a60563301"
     },
     {
-        name: "Jonathas Maciel",
-        githubLink: "https://github.com/jonz1n",
-        linkedinLink: "https://www.linkedin.com/in/jonathasmacielsantos"
-    },
-    {
         name: "Pedro Carneiro",
         githubLink: "https://github.com/Pkarneiro",
         linkedinLink: "https://linkedin.com/in/pedro-henrique-carneiro-787010257"

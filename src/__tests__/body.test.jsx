@@ -30,7 +30,8 @@ describe('Body Component', () => {
 
                 //Teste dos Cards
 
-                for (const card of cards[filtro.id]) {
+                const filtroCards = cards[filtro.id] || [];
+                for (const card of filtroCards) {
                     expect(screen.getByText(card.title)).toBeInTheDocument();
                     // console.log("Renderizado Card:", card.title);
                 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "./Card";
 import { Button } from "./Button";
 import { filterData } from "../utils/data/filter";
@@ -36,7 +36,7 @@ for (let category in cards) {
 }
 allCards.sort((a, b) => a.title.localeCompare(b.title));
 
-export function Body() {
+export function Body({ searchTerm }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -68,8 +68,21 @@ export function Body() {
     }
   }
 
+
+  useEffect(() => {
+    if (typeof searchTerm !== "undefined" && searchTerm !== "") {
+      const filteredCards = allCards.filter((card) =>
+        card.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setActiveCards(filteredCards);
+      setActiveFilter("Todas as Ferramentas");
+    } else {
+      setActiveCards(allCards);
+    }
+  }, [searchTerm]);
+
   return (
-    <div className="bg-white relative ">
+    <div className="bg-white relative">
       <div className="navigation-wrapper z-10 transform -translate-y-[40px]">
         <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
           {filterData.map((filter, index) => (
@@ -107,21 +120,21 @@ export function Body() {
           )}
         </div>
       </div>
-      <div className=" flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
-        {
-          activeCards.map((filter, index) => {
-            return (
-              <Card
-                key={index}
-                title={filter.title}
-                description={filter.description}
-                image={filter.image}
-                link={filter.link}
-                category={filter.category}
-              />
-            );
-          })
-        }
+      <div className="flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
+        {activeCards.length === 0 ? (
+          <div className="font-[600] flex items-center justify-center break-words h-[80px] px-[45px] mx-[7px] my-[2rem] text-[2rem] text-secondary">Ferramenta não encontrada</div>
+        ) : (
+          activeCards.map((card, index) => (
+            <Card
+              key={index}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+              link={card.link}
+              category={card.category}
+            />
+          ))
+        )}
       </div>
     </div>
   );
