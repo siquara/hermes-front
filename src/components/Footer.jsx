@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <div className="bg-secondary text-white flex flex-col justify-between ">
       <div className="mt-[60px] mx-auto max-w-7xl px-6 gap-6 w-full grid grid-cols-12 lg:items-start">
-        <div className="col-span-12 sm:col-span-12 lg:col-span-4 flex items-center justify-center flex-col mb-6">
+        <div className="col-span-12 sm:col-span-12 lg:col-span-4 flex items-center justify-center flex-col lg:mb-6">
           <img
             src={HermesLogoWhite}
             alt="Hermes Logo"
@@ -25,7 +25,7 @@ export function Footer() {
             <GithubLogo size={35} />
             Acesse Aqui o Repositório
           </a>
-          <div className="flex flex-col gap-5 mt-5 mb-5 w-full items-center">
+          <div className="flex flex-col gap-5 mt-5  w-full items-center">
             <h2 className="font-[600] text-lg text-center">Desenvolvedores:</h2>
               {members2.map((filter, index) => {
               return (
@@ -38,7 +38,7 @@ export function Footer() {
               ); })}
           </div>
         </div>
-        <div className="col-span-12 sm:col-span-6 lg:col-span-4 flex flex-col gap-5 mb-5 w-full items-center ">
+        <div className="col-span-12 sm:col-span-6 lg:col-span-4 flex flex-col gap-5 lg:mb-5 w-full items-center sm:mb-5 ">
               <h2 className="font-[600] text-lg text-center">Documentação:</h2>
               {members1.map((filter, index) => {
               return (
