@@ -16,7 +16,7 @@ describe('Body Component', () => {
 
         for (const filtro of filterData) {
             //Ignora o Todas as Ferramentas pois ela não é um Array que precise ser testado
-            if (filtro.id === 'todasAsFerramentas'){
+            if (filtro.id === 'todasAsFerramentas') {
                 continue;
             }
 

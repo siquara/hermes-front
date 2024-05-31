@@ -1,6 +1,7 @@
 
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import HeroWoman from "/HeroWoman.png";
+import React from "react"
 
 // xs400:pt-[8rem] md:pt-[15rem] lg:pt-0
 export function Hero({ searchTerm, setSearchTerm }) {
@@ -17,6 +18,7 @@ export function Hero({ searchTerm, setSearchTerm }) {
           <div className="relative mt-8 w-full xs400:w-80">
             <input
               type="text"
+              data-testid="searchComponent"
               id="searchComponent"
               className="pr-10 p-2 pl-4 text-start text-secondary w-full rounded-full border-none focus:outline-none focus:ring-1 focus:ring-black"
               placeholder="Pesquisar Ferramenta"
