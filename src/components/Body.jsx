@@ -7,6 +7,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { cards } from "../utils/data/cards";
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { FaTrash } from "react-icons/fa";
 
 function Arrow(props) {
   const disabled = props.disabled ? " arrow--disabled" : "";
@@ -25,6 +26,11 @@ function Arrow(props) {
   );
 }
 
+function clearFavorites() {
+  localStorage.removeItem('favorites');
+  window.location.reload();
+}
+
 const allCards = [];
 for (let category in cards) {
   const categoryObject = filterData.find(filter => filter.id === category);
@@ -37,8 +43,8 @@ for (let category in cards) {
 allCards.sort((a, b) => a.title.localeCompare(b.title));
 
 export function Body({ searchTerm }) {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: false,
     mode: "snap",
@@ -48,26 +54,38 @@ export function Body({ searchTerm }) {
     },
     initial: 0,
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+      setCurrentSlide(slider.track.details.rel);
     },
     created() {
-      setLoaded(true)
+      setLoaded(true);
     },
   });
 
-  const [activeFilter, setActiveFilter] = React.useState(filterData[0].title);
-  const [activeCards, setActiveCards] = React.useState(allCards);
+  const [activeFilter, setActiveFilter] = useState(filterData[0].title);
+  const [activeCards, setActiveCards] = useState(allCards);
+  const [visibleCards, setVisibleCards] = useState(4);
 
   function handleChangeActiveCard(filter) {
     if (filter.id === "todasAsFerramentas") {
-      setActiveFilter(filter.title)
-      setActiveCards(allCards)
+      setActiveFilter(filter.title);
+      setActiveCards(allCards);
+      setVisibleCards(4); // Reset visible cards count
+    } else if (filter.id === "favoritos") {
+      setActiveFilter(filter.title);
+      const favoriteTitles = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')).map(card => card.title) : [];
+      const favoriteCards = allCards.filter(card => favoriteTitles.includes(card.title));
+      setActiveCards(favoriteCards);
+      setVisibleCards(4); // Reset visible cards count
     } else {
-      setActiveFilter(filter.title)
+      setActiveFilter(filter.title);
       setActiveCards(cards[filter.id]);
+      setVisibleCards(4); // Reset visible cards count
     }
   }
 
+  function loadMoreCards() {
+    setVisibleCards(prevVisibleCards => prevVisibleCards + 4);
+  }
 
   useEffect(() => {
     if (typeof searchTerm !== "undefined" && searchTerm !== "") {
@@ -76,14 +94,16 @@ export function Body({ searchTerm }) {
       );
       setActiveCards(filteredCards);
       setActiveFilter("Todas as Ferramentas");
+      setVisibleCards(4); // Reset visible cards count
     } else {
       setActiveCards(allCards);
+      setVisibleCards(4); // Reset visible cards count
     }
   }, [searchTerm]);
 
   return (
     <div className="bg-white relative">
-      <div className="navigation-wrapper z-10 transform -translate-y-[40px]">
+      <div className="navigation-wrapper z-10 transform -translate-y-[40px] flex items-center align-middle flex-col">
         <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
           {filterData.map((filter, index) => (
             <div key={index} className="keen-slider__slide min-w-fit max-w-fit">
@@ -96,7 +116,7 @@ export function Body({ searchTerm }) {
             </div>
           ))}
         </div>
-        <div className="flex gap-10 items-center justify-center">
+        <div className="flex gap-10 items-center align-middle justify-center">
           {loaded && instanceRef.current && (
             <>
               <Arrow
@@ -118,13 +138,20 @@ export function Body({ searchTerm }) {
               />
             </>
           )}
+          
         </div>
+        <button
+          onClick={clearFavorites}
+          className="bg-red-600 hover:bg-red-500 text-white flex gap-2 items-center align-middle font-bold py-2 px-4 rounded mt-6 ml-[45%]"
+        >
+          <FaTrash size={'1.1rem'} className="text-white"/>Limpar Favoritos
+        </button>
       </div>
       <div className="flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
         {activeCards.length === 0 ? (
           <div className="font-[600] flex items-center justify-center break-words h-[80px] px-[45px] mx-[7px] my-[2rem] text-[2rem] text-secondary">Ferramenta não encontrada</div>
         ) : (
-          activeCards.map((card, index) => (
+          activeCards.slice(0, visibleCards).map((card, index) => (
             <Card
               key={index}
               title={card.title}
@@ -132,10 +159,21 @@ export function Body({ searchTerm }) {
               image={card.image}
               link={card.link}
               category={card.category}
+              favorite={card.favorite || false} // Passa o valor de favorite para o Card
             />
           ))
         )}
       </div>
+      {visibleCards < activeCards.length && (
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={loadMoreCards}
+            className="bg-primary cursor-pointer w-full mx-[20%] mb-4 text-white font-bold py-2 px-4 rounded"
+          >
+            Ver Mais
+          </button>
+        </div>
+      )}
     </div>
   );
 }
