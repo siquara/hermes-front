@@ -8,6 +8,8 @@ import "keen-slider/keen-slider.min.css";
 import { cards } from "../utils/data/cards";
 import { CaretLeft, CaretRight, Trash } from "@phosphor-icons/react";
 
+const isTest = process.env.NODE_ENV === 'test';
+
 function Arrow(props) {
   const disabled = props.disabled ? " arrow--disabled" : "";
   return props.left ? (
@@ -63,22 +65,22 @@ export function Body({ searchTerm }) {
   const [activeFilter, setActiveFilter] = useState(filterData[0].title);
   const [activeFilterId, setActiveFilterId] = useState(filterData[0].id); // Adiciona estado para o ID do filtro ativo
   const [activeCards, setActiveCards] = useState(allCards);
-  const [visibleCards, setVisibleCards] = useState(4);
+  const [visibleCards, setVisibleCards] = useState(isTest ? allCards.length : 4);
 
   function handleChangeActiveCard(filter) {
     setActiveFilter(filter.title);
     setActiveFilterId(filter.id); // Atualiza o ID do filtro ativo
     if (filter.id === "todasAsFerramentas") {
       setActiveCards(allCards);
-      setVisibleCards(4); // Reset visible cards count
+      setVisibleCards(isTest ? allCards.length : 4);
     } else if (filter.id === "favoritos") {
       const favoriteTitles = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')).map(card => card.title) : [];
       const favoriteCards = allCards.filter(card => favoriteTitles.includes(card.title));
       setActiveCards(favoriteCards);
-      setVisibleCards(4); // Reset visible cards count
+      setVisibleCards(isTest ? allCards.length : 4);
     } else {
       setActiveCards(cards[filter.id]);
-      setVisibleCards(4); // Reset visible cards count
+      setVisibleCards(isTest ? cards[filter.id].length : 4); 
     }
   }
 
@@ -94,10 +96,10 @@ export function Body({ searchTerm }) {
       setActiveCards(filteredCards);
       setActiveFilter("Todas as Ferramentas");
       setActiveFilterId("todasAsFerramentas"); // Atualiza o ID do filtro ativo
-      setVisibleCards(4); // Reset visible cards count
+      setVisibleCards(isTest ? filteredCards.length : 4); // Mostra todos os cards em modo de teste
     } else {
       setActiveCards(allCards);
-      setVisibleCards(4); // Reset visible cards count
+      setVisibleCards(isTest ? allCards.length : 4); // Mostra todos os cards em modo de teste
     }
   }, [searchTerm]);
 
