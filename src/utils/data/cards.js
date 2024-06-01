@@ -5,7 +5,6 @@ export const cards = {
             title: "Trello",
             description: "O Trello é uma ferramenta de gerenciamento de projetos baseada em quadros. Ele permite que você organize e acompanhe o progresso de diferentes tarefas e projetos de forma visual e colaborativa.",
             image: "https://i.postimg.cc/vTG38f26/trello.png",
-            favorite: false,
             link: "https://trello.com/pt-BR"
         },
         {
@@ -13,7 +12,6 @@ export const cards = {
             title: "Jira",
             description: "O Jira é um software de gerenciamento de projetos desenvolvido pela Atlassian. Esse software reúne todas as funcionalidades necessárias para o controle e organização de diferentes tipos de projetos, equipes e ambientes de desenvolvimento.",
             image: "https://i.postimg.cc/nLzxr95g/jira.png",
-            favorite: false,
             link: "https://www.atlassian.com/software/jira"
         },
         {
@@ -21,7 +19,6 @@ export const cards = {
             title: "Asana",
             description: "Asana é uma ferramenta para gerenciamento de projetos, tarefas e equipes. Sua função é tornar o cotidiano dos usuários mais produtivo ao centralizar tudo em um único app.",
             image: "https://i.postimg.cc/XY93t051/assana.png",
-            favorite: false,
             link: "https://asana.com/pt?noredirect="
         },
         {
@@ -29,7 +26,6 @@ export const cards = {
             title: "BaseCamp",
             description: "O Basecamp é uma ferramenta de gerenciamento de projetos que permite que você organize e acompanhe o progresso de diferentes tarefas e projetos de forma visual e colaborativa. Ele oferece uma série de funcionalidades que facilitam o planejamento, execução e controle de projetos de diferentes portes e complexidades.",
             image: "https://i.postimg.cc/zXg1R1xD/basecamp.png",
-            favorite: false,
             link: "https://brasil.basecamp.com"
         },
         {
@@ -37,7 +33,6 @@ export const cards = {
             title: "Microsoft Project",
             description: "O Microsoft Project é um software de gerenciamento de projetos desenvolvido pela Microsoft. Ele é um dos programas mais utilizados no mundo para a gestão de projetos, pois oferece uma série de funcionalidades que facilitam o planejamento, execução e controle de projetos de diferentes portes e complexidades.",
             image: "https://i.postimg.cc/g2cFt6Yj/Microsoft-Project.png",
-            favorite: false,
             link: "https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software"
         }
     ],
@@ -47,7 +42,6 @@ export const cards = {
             title: "Git",
             description: "O Git é um sistema de controle de versão distribuído, ou seja, ele permite que você mantenha um histórico completo de todas as alterações feitas no código-fonte do seu projeto, além de permitir que você trabalhe de forma colaborativa com outros desenvolvedores.",
             image: "https://i.postimg.cc/WpD4SC5C/git.png",
-            favorite: false,
             link: "https://git-scm.com"
         },
         {
@@ -55,7 +49,6 @@ export const cards = {
             title: "GitHub",
             description: "O GitHub é uma plataforma de hospedagem de código-fonte e colaboração para desenvolvedores. Ele permite que você armazene, compartilhe e colabore em projetos de código aberto e privados com outros desenvolvedores de todo o mundo.",
             image: "https://i.postimg.cc/rw9yKkp0/GitHub.png",
-            favorite: false,
             link: "https://github.com"
         },
         {
@@ -63,7 +56,6 @@ export const cards = {
             title: "Bitbucket",
             description: "O Bitbucket é uma plataforma de hospedagem de código-fonte e colaboração para desenvolvedores. Ele permite que você armazene, compartilhe e colabore em projetos de código aberto e privados com outros desenvolvedores de todo o mundo.",
             image: "https://i.postimg.cc/vmQRjxbD/Bitbucket.png",
-            favorite: false,
             link: "https://bitbucket.org"
         },
         {
@@ -71,7 +63,6 @@ export const cards = {
             title: "SVN (Apache Subversion)",
             description: "O Subversion é um sistema de controle de versão centralizado, ou seja, ele mantém um único repositório centralizado onde todas as alterações são armazenadas. Ele é uma alternativa ao Git e é amplamente utilizado em projetos de software.",
             image: "https://i.postimg.cc/x1ZxGk8W/subversion.png",
-            favorite: false,
             link: "https://subversion.apache.org"
         },
         {
@@ -79,7 +70,6 @@ export const cards = {
             title: "Mercurial",
             description: "O Mercurial é um sistema de controle de versão distribuído, semelhante ao Git. Ele permite que você mantenha um histórico completo de todas as alterações feitas no código-fonte do seu projeto e trabalhe de forma colaborativa com outros desenvolvedores.",
             image: "https://i.postimg.cc/gkHbKKb1/mercurial.png",
-            favorite: false,
             link: "https://www.mercurial-scm.org"
         }
     ],
@@ -89,7 +79,6 @@ export const cards = {
             title: "Visual Studio Code",
             description: "O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft. Ele é um dos editores de código mais populares entre os desenvolvedores de software, pois oferece uma série de recursos avançados que facilitam a escrita, edição e depuração de código.",
             image: "https://i.postimg.cc/VsFKGZ59/vscode.png",
-            favorite: false,
             link: "https://code.visualstudio.com"
         },
         {
@@ -97,7 +86,6 @@ export const cards = {
             title: "IntelliJ IDEA",
             description: "O IntelliJ IDEA é uma IDE (Integrated Development Environment) desenvolvida pela JetBrains. Oferece uma série de recursos avançados que facilitam o desenvolvimento de aplicativos Java, Kotlin, Groovy e Scala.",
             image: "https://i.postimg.cc/4xwZXQ8p/Intelli-J-IDEA.png",
-            favorite: false,
             link: "https://www.jetbrains.com/idea"
         },
         {
@@ -105,7 +93,6 @@ export const cards = {
             title: "Eclipse",
             description: "O Eclipse é uma IDE (Integrated Development Environment) desenvolvida pela Eclipse Foundation. Oferece uma série de recursos avançados que facilitam o desenvolvimento de aplicativos Java, C/C++ e PHP.",
             image: "https://i.postimg.cc/GpZ2QZyk/Eclipse.png",
-            favorite: false,
             link: "https://www.eclipse.org"
         },
         {
@@ -113,7 +100,6 @@ export const cards = {
             title: "NetBeans",
             description: "O NetBeans é uma IDE (Integrated Development Environment) desenvolvida pela Apache Software Foundation. Oferece uma série de recursos avançados que facilitam o desenvolvimento de aplicativos Java, PHP, C/C++ e HTML5.",
             image: "https://i.postimg.cc/PxhyPF5M/Net-Beans.png",
-            favorite: false,
             link: "https://netbeans.apache.org"
         },
         {
@@ -121,7 +107,6 @@ export const cards = {
             title: "PyCharm",
             description: "O PyCharm é uma IDE (Integrated Development Environment) desenvolvida pela JetBrains. Ela é uma das IDEs mais populares entre os desenvolvedores de software, pois oferece uma série de recursos avançados que facilitam o desenvolvimento de aplicativos Python, Django e Flask.",
             image: "https://i.postimg.cc/DyFtmb46/PyCharm.png",
-            favorite: false,
             link: "https://www.jetbrains.com/pycharm"
         }
     ],
@@ -131,7 +116,6 @@ export const cards = {
             title: "JUnit",
             description: "Framework open-source para construção de testes automatizados em Java,  em que se verifica as funcionalidades de classes e seus métodos. Além disso, podemos automatizar também a execução de todos os testes de forma que quando há uma nova versão estável do sistema, o framework execute todos os testes para garantir a integridade e estabilidade do que foi desenvolvido.",
             image: "https://i.postimg.cc/634NLJBh/JUnit.png",
-            favorite: false,
             link: "https://junit.org"
         },
         {
@@ -139,7 +123,6 @@ export const cards = {
             title: "Selenium",
             description: "O Selenium é um framework de teste de software para a automação de testes em aplicativos web. Ele permite que você escreva testes automatizados para verificar se o seu aplicativo web está funcionando corretamente em diferentes navegadores e plataformas.",
             image: "https://i.postimg.cc/j2TkWG22/Selenium.png",
-            favorite: false,
             link: "https://www.selenium.dev"
         },
         {
@@ -147,7 +130,6 @@ export const cards = {
             title: "Postman",
             description: "O Postman é uma ferramenta de colaboração para o desenvolvimento de APIs. Ele permite que você crie, compartilhe, teste e documente APIs de forma rápida e fácil. Além disso, ele oferece uma série de recursos avançados que facilitam o desenvolvimento de APIs RESTful.",
             image: "https://i.postimg.cc/pVKw2Bry/PostMan.png",
-            favorite: false,
             link: "https://www.postman.com"
         },
         {
@@ -155,7 +137,6 @@ export const cards = {
             title: "SoapUI",
             description: "É uma aplicação open source utilizada em testes de web services de arquitecturas orientadas a serviços (SOA) ou transferências de estado representacional (REST). É uma aplicação multi-plataforma desenvolvida em Java. ",
             image: "https://i.postimg.cc/05G4g2Xw/SoapUI.png",
-            favorite: false,
             link: "https://www.soapui.org"
 
         },
@@ -164,7 +145,6 @@ export const cards = {
             title: "Appium",
             description: "O Appium é um framework de teste de software para a automação de testes em aplicativos móveis. Ele permite que você escreva testes automatizados para verificar se o seu aplicativo móvel está funcionando corretamente em diferentes dispositivos e plataformas.",
             image: "https://i.postimg.cc/T1hfsLjn/appium.png",
-            favorite: false,
             link: "http://appium.io"
         }
     ],
@@ -174,7 +154,6 @@ export const cards = {
             title: "Slack",
             description: "O Slack é uma plataforma de comunicação para equipes de trabalho. Ele permite que você se comunique com seus colegas de trabalho de forma rápida e fácil, além de compartilhar arquivos, fazer chamadas de voz e vídeo e integrar com outras ferramentas de produtividade.",
             image: "https://i.postimg.cc/760WZxxj/slack.png",
-            favorite: false,
             link: "https://slack.com"
         },
         {
@@ -182,7 +161,6 @@ export const cards = {
             title: "Microsoft Teams",
             description: "O Microsoft Teams é definido pela própria Microsoft como um espaço de trabalho baseado em um chat que integra todas as pessoas, conteúdos e ferramentas que sua empresa precisa para melhorar o seu engajamento e ser mais eficaz.",
             image: "https://i.postimg.cc/xdbs60bq/teams.png",
-            favorite: false,
             link: "https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software"
         },
         {
@@ -190,7 +168,6 @@ export const cards = {
             title: "Zoom",
             description: "O Zoom é uma plataforma de videoconferência para reuniões online. Ele permite que você realize chamadas de vídeo com seus colegas de trabalho de forma rápida e fácil, além de compartilhar arquivos, fazer apresentações e integrar com outras ferramentas de produtividade.",
             image: "https://i.postimg.cc/ZKwyxVFV/zoom.png",
-            favorite: false,
             link: "https://zoom.us"
 
         },
@@ -199,7 +176,6 @@ export const cards = {
             title: "Google Meet",
             description: "O Google Meet é um aplicativo desenvolvido pelo Google com foco na realização das videoconferências. Logo, ele permite a realização de reuniões a distância, superando as barreiras geográficas e com uma série de benefícios a todos os usuários.",
             image: "https://i.postimg.cc/tgCq6M1r/google-meet.png",
-            favorite: false,
             link: "https://meet.google.com"
         },
         {
@@ -207,7 +183,6 @@ export const cards = {
             title: "Discord",
             description: "O Discord é uma plataforma de comunicação para gamers. Ele permite que você se comunique com seus colegas de jogo de forma rápida e fácil, além de compartilhar arquivos, fazer chamadas de voz e vídeo e integrar com outras ferramentas de produtividade.",
             image: "https://i.postimg.cc/mg3f8yx0/discord.png",
-            favorite: false,
             link: "https://discord.com"
         }
     ],
@@ -217,7 +192,6 @@ export const cards = {
             title: "Jenkins",
             description: "O Jenkins gerencia e controla os processos de entrega de software em todo o ciclo de vida, incluindo construção, documento, teste, pacote, estágio, implantação, análise de código estático e muito mais.",
             image: "https://i.postimg.cc/cLN3ctfD/Jenkins.png",
-            favorite: false,
             link: "https://www.jenkins.io"
         },
         {
@@ -225,7 +199,6 @@ export const cards = {
             title: "CircleCI",
             description: "O CircleCI é uma ferramenta que permite que as equipes liberem rapidamente o código em que confiam, automatizando o processo de compilação, teste e entrega para aplicativos moveis e da web, na nuvem ou em um próprio servidor privado. ",
             image: "https://i.postimg.cc/XNhbJvcD/circle-ci.png",
-            favorite: false,
             link: "https://circleci.com"
         },
         {
@@ -233,7 +206,6 @@ export const cards = {
             title: "Travis CI",
             description: "O Travis CI é uma plataforma de automação de build e integração contínua. Ele permite que você automatize o processo de construção, teste e implantação do seu projeto de software, além de integrar com outras ferramentas de desenvolvimento.",
             image: "https://i.postimg.cc/jjysKv2T/travis-CI.png",
-            favorite: false,
             link: "https://www.travis-ci.com"
         },
         {
@@ -241,7 +213,6 @@ export const cards = {
             title: "Bamboo",
             description: "O Bamboo é uma ferramenta de integração contínua, ou CI (Continuous Integration). Com ele, é possível automatizar o processo de construção, teste e distribuição do software. O Bamboo é desenvolvido pela Atlassian e foi projetado para trabalhar integrado com outras ferramentas da empresa, como o JIRA, Bitbucket, Stash e Confluence.",
             image: "https://i.postimg.cc/2yPRXHSf/Bamboo.png",
-            favorite: false,
             link: "https://www.atlassian.com/software/bamboo"
         },
         {
@@ -249,7 +220,6 @@ export const cards = {
             title: "TeamCity",
             description: "O TeamCity é um servidor de gerenciamento distribuído de build e integração contínua. Ela foi desenvolvida pela JetBrains em 2006, é compatível com diversas tecnologias como .NET, Java, Docker dentre outras. Suporta diversos controles de versão: Subversion, CVS, Team Foundation Server (2005 em diante), VSTS, SourceSafe, Git, etc.",
             image: "https://i.postimg.cc/ydmLzvjH/Team-City.png",
-            favorite: false,
             link: "https://www.jetbrains.com/teamcity"
         }
     ],
@@ -259,7 +229,6 @@ export const cards = {
             title: "Splunk",
             description: "O Splunk pode ser definido como um conjunto de serviços que permite a agregar, analisar, transformar, visualizar, compartilhar e realizar diversas outras operações em dados de quaisquer origens: computadores, dispositivos de rede, máquinas virtuais, arquivos, mensagens e muito mais.",
             image: "https://i.postimg.cc/4yBbmz82/splunk.png",
-            favorite: false,
             link: "https://www.splunk.com"
 
         },
@@ -268,7 +237,6 @@ export const cards = {
             title: "Grafana",
             description: "O Grafana é uma plataforma interativa de visualização de dados open source, desenvolvida pela Grafana Labs, que permite aos usuários ver dados por meio de tabelas e gráficos unificados em um painel ou vários, para facilitar a interpretação e a compreensão.",
             image: "https://i.postimg.cc/qBCk2nRd/Grafana.png",
-            favorite: false,
             link: "https://grafana.com"
         },
         {
@@ -276,7 +244,6 @@ export const cards = {
             title: "New Relic",
             description: "É uma plataforma de observabilidade altamente escalável que coleta e contextualiza todos os dados operacionais, de qualquer fonte, e simplifica a instrumentação, ingestão de dados, exploração, correlação e a análise com machine learning para oferecer suporte à observabilidade em qualquer organização.",
             image: "https://i.postimg.cc/cJjpJ9ft/new-relic.png",
-            favorite: false,
             link: "https://newrelic.com"
         },
         {
@@ -284,7 +251,6 @@ export const cards = {
             title: "ELK Stack (Elasticsearch, Logstash, Kibana)",
             description: "O ELK Stack é uma plataforma de monitoramento e logging. Ele permite que você colete, armazene e consulte logs e métricas de diferentes fontes, além de gerar alertas e visualizações em tempo real.",
             image: "https://i.postimg.cc/Jz0YB3rN/stack.png",
-            favorite: false,
             link: "https://www.elastic.co/pt/what-is/elk-stack"
         },
         {
@@ -292,7 +258,6 @@ export const cards = {
             title: "Nagios",
             description: "Sistema de monitoramento projetado com escalabilidade e flexibilidade que permite as organizações identificar e resolver problemas em grandes e pequenas redes de computadores com certo grau de tranquilidade antes que eles afetem processos críticos do negócio.",
             image: "https://i.postimg.cc/xCzWNvPx/nagios.png",
-            favorite: false,
             link: "https://www.nagios.org"
         }
     ],
@@ -302,7 +267,6 @@ export const cards = {
             title: "Confluence",
             description: "O Confluence é uma plataforma de documentação de projetos e equipes. Ele permite que você crie, compartilhe e documente projetos de forma rápida e fácil, além de gerar documentação interativa para seus projetos.",
             image: "https://i.postimg.cc/43BCT4xP/confluence.png",
-            favorite: false,
             link: "https://www.atlassian.com/software/confluence"
         },
         {
@@ -310,7 +274,6 @@ export const cards = {
             title: "Google Docs",
             description: "O Google Docs é uma plataforma de documentação de projetos e equipes. Ele permite que você crie, compartilhe e documente projetos de forma rápida e fácil, além de gerar documentação interativa para seus projetos.",
             image: "https://i.postimg.cc/2SpRLwpK/google-docs.png",
-            favorite: false,
             link: "https://docs.google.com"
         },
         {
@@ -318,7 +281,6 @@ export const cards = {
             title: "Microsoft Word",
             description: "O Microsoft Word é uma plataforma de documentação de projetos e equipes. Ele permite que você crie, compartilhe e documente projetos de forma rápida e fácil, além de gerar documentação interativa para seus projetos.",
             image: "https://i.postimg.cc/Bn5Xbp7q/word.png",
-            favorite: false,
             link: "https://www.microsoft.com/pt-br/microsoft-365/word"
         },
         {
@@ -326,7 +288,6 @@ export const cards = {
             title: "Markdown",
             description: "O Markdown é uma linguagem de marcação de texto simples e fácil de aprender. Ele permite que você crie, compartilhe e documente projetos de forma rápida e fácil, além de gerar documentação interativa para seus projetos.",
             image: "https://i.postimg.cc/65rv4ByJ/Markdown.png",
-            favorite: false,
             link: "https://www.markdownguide.org"
         },
         {
@@ -334,7 +295,6 @@ export const cards = {
             title: "Doxygen",
             description: "O Doxygen é uma ferramenta de documentação de código-fonte. Ele permite que você crie, compartilhe e documente projetos de forma rápida e fácil, além de gerar documentação interativa para seus projetos.",
             image: "https://i.postimg.cc/XqZ6LM38/Doxygen.png",
-            favorite: false,
             link: "https://www.doxygen.nl/index.html"
         }
     ],
@@ -344,7 +304,6 @@ export const cards = {
             title: "Lucidchart",
             description: "O Lucidchart é uma plataforma de planejamento e modelagem de projetos. Ele permite que você crie, compartilhe e documente diagramas de forma rápida e fácil, além de gerar diagramas interativos para seus projetos.",
             image: "https://i.postimg.cc/Y2gHvHnr/lucidchart.png",
-            favorite: false,
             link: "https://www.lucidchart.com"
         },
         {
@@ -352,7 +311,6 @@ export const cards = {
             title: "Draw.io",
             description: "O Draw.io é uma plataforma de planejamento e modelagem de projetos. Ele permite que você crie, compartilhe e documente diagramas de forma rápida e fácil, além de gerar diagramas interativos para seus projetos.",
             image: "https://i.postimg.cc/G22W30BC/draw-io.png",
-            favorite: false,
             link: "https://www.draw.io"
         },
         {
@@ -360,7 +318,6 @@ export const cards = {
             title: "Microsoft Visio",
             description: "O Microsoft Visio é uma plataforma de planejamento e modelagem de projetos. Ele permite que você crie, compartilhe e documente diagramas de forma rápida e fácil, além de gerar diagramas interativos para seus projetos.",
             image: "https://i.postimg.cc/mgdxv2Dw/Microsoft-Visio.png",
-            favorite: false,
             link: "https://www.microsoft.com/pt-br/microsoft-365/visio/flowchart-software"
         },
         {
@@ -368,7 +325,6 @@ export const cards = {
             title: "Enterprise Architect",
             description: "O Enterprise Architect é uma plataforma de planejamento e modelagem de projetos. Ele permite que você crie, compartilhe e documente diagramas de forma rápida e fácil, além de gerar diagramas interativos para seus projetos.",
             image: "https://i.postimg.cc/nV6hW25z/enterprise.png",
-            favorite: false,
             link: "https://sparxsystems.com"
         },
         {
@@ -376,7 +332,6 @@ export const cards = {
             title: "Rational Rose",
             description: "O Rational Rose é uma plataforma de planejamento e modelagem de projetos. Ele permite que você crie, compartilhe e documente diagramas de forma rápida e fácil, além de gerar diagramas interativos para seus projetos.",
             image: "https://i.postimg.cc/VkkpWQRb/rational-rose.png",
-            favorite: false,
             link: "https://www.ibm.com/br-pt/products/rational-rose"
         }
     ],
@@ -386,7 +341,6 @@ export const cards = {
             title: "SonarQube",
             description: "O SonarQube é uma plataforma de análise de código-fonte. Ele permite que você analise a qualidade do seu código-fonte, identifique problemas de segurança e desem  desempenho e melhore a manutenibilidade do seu projeto.",
             image: "https://i.postimg.cc/SNyvmFHt/sonarqube.png",
-            favorite: false,
             link: "https://www.sonarqube.org"
         },
         {
@@ -394,7 +348,6 @@ export const cards = {
             title: "ESLint",
             description: "O ESLint é uma ferramenta de análise de código-fonte para a linguagem de programação JavaScript. Ele permite que você analise a qualidade do seu código-fonte, identifique problemas de segurança e desempenho e melhore a manutenibilidade do seu projeto.",
             image: "https://i.postimg.cc/vDRkvc0Y/ESLont.png",
-            favorite: false,
             link: "https://eslint.org"
         },
         {
@@ -402,7 +355,6 @@ export const cards = {
             title: "Checkstyle",
             description: "O Checkstyle é uma ferramenta de análise de código-fonte para a linguagem de programação Java. Ele permite que você analise a qualidade do seu código-fonte, identifique problemas de segurança e desem",
             image: "https://i.postimg.cc/pLMMf1Sf/Checkstyle.png",
-            favorite: false,
             link: "https://checkstyle.sourceforge.io"
         },
         {
@@ -410,7 +362,6 @@ export const cards = {
             title: "PMD",
             description: "O PMD é uma ferramenta de análise de código-fonte para a linguagem de programação Java. Ele permite que você analise a qualidade do seu código-fonte, identifique problemas de segurança e desem",
             image: "https://i.postimg.cc/2ydM2CMn/PMD.png",
-            favorite: false,
             link: "https://pmd.github.io/pmd-6.37.0/index.html"
         },
         {
@@ -418,7 +369,6 @@ export const cards = {
             title: "ReSharper",
             description: "O ReSharper é uma ferramenta de análise de código-fonte para a linguagem de programação C#. Ele permite que você analise a qualidade do seu código-fonte, identifique problemas de segurança e desem",
             image: "https://i.postimg.cc/yxBnzk2n/Re-Sharper.png",
-            favorite: false,
             link: "https://www.jetbrains.com/resharper"
         }
     ],
@@ -428,7 +378,6 @@ export const cards = {
             title: "TestLink",
             description: "O TestLink é uma plataforma de controle de qualidade de software. Ele permite que você crie, gerencie e execute casos de teste, além de rastrear defeitos e problemas de qualidade em seus projetos.",
             image: "https://i.postimg.cc/2jdWgvPW/testLink.png",
-            favorite: false,
             link: "http://testlink.org"
         },
         {
@@ -436,7 +385,6 @@ export const cards = {
             title: "TestRail",
             description: "O TestRail é uma plataforma de controle de qualidade de software. Ele permite que você crie, gerencie e execute casos de teste, além de rastrear defeitos e problemas de qualidade em seus projetos.",
             image: "https://i.postimg.cc/kM1njZz6/TestRail.png",
-            favorite: false,
             link: "https://www.gurock.com/testrail"
 
         },
@@ -445,7 +393,6 @@ export const cards = {
             title: "Zephyr",
             description: "O Zephyr é uma plataforma de controle de qualidade de software. Ele permite que você crie, gerencie e execute casos de teste, além de rastrear defeitos e problemas de qualidade em seus projetos.",
             image: "https://i.postimg.cc/0yzZN8nZ/Zephyr.png",
-            favorite: false,
             link: "https://www.zephyrproject.org"
         },
         {
@@ -453,7 +400,6 @@ export const cards = {
             title: "QTest",
             description: "O QTest é uma plataforma de controle de qualidade de software. Ele permite que você crie, gerencie e execute casos de teste, além de rastrear defeitos e problemas de qualidade em seus projetos.",
             image: "https://i.postimg.cc/022cLGJT/Tricentis_qTest.png",
-            favorite: false,
             link: "https://www.qasymphony.com"
         },
         {
@@ -461,7 +407,6 @@ export const cards = {
             title: "Xray",
             description: "O Xray é uma plataforma de controle de qualidade de software. Ele permite que você crie, gerencie e execute casos de teste, além de rastrear defeitos e problemas de qualidade em seus projetos.",
             image: "https://i.postimg.cc/1XNDj6mf/xray.png",
-            favorite: false,
             link: "https://www.getxray.app"
         }
     ]

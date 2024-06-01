@@ -14,8 +14,7 @@
     "@phosphor-icons/react": "^2.1.4",
     "keen-slider": "^6.8.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.2.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",

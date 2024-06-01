@@ -7,7 +7,6 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { cards } from "../utils/data/cards";
 import { CaretLeft, CaretRight, Trash } from "@phosphor-icons/react";
-import { FaTrash } from "react-icons/fa";
 
 function Arrow(props) {
   const disabled = props.disabled ? " arrow--disabled" : "";
@@ -62,22 +61,22 @@ export function Body({ searchTerm }) {
   });
 
   const [activeFilter, setActiveFilter] = useState(filterData[0].title);
+  const [activeFilterId, setActiveFilterId] = useState(filterData[0].id); // Adiciona estado para o ID do filtro ativo
   const [activeCards, setActiveCards] = useState(allCards);
   const [visibleCards, setVisibleCards] = useState(4);
 
   function handleChangeActiveCard(filter) {
+    setActiveFilter(filter.title);
+    setActiveFilterId(filter.id); // Atualiza o ID do filtro ativo
     if (filter.id === "todasAsFerramentas") {
-      setActiveFilter(filter.title);
       setActiveCards(allCards);
       setVisibleCards(4); // Reset visible cards count
     } else if (filter.id === "favoritos") {
-      setActiveFilter(filter.title);
       const favoriteTitles = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')).map(card => card.title) : [];
       const favoriteCards = allCards.filter(card => favoriteTitles.includes(card.title));
       setActiveCards(favoriteCards);
       setVisibleCards(4); // Reset visible cards count
     } else {
-      setActiveFilter(filter.title);
       setActiveCards(cards[filter.id]);
       setVisibleCards(4); // Reset visible cards count
     }
@@ -94,6 +93,7 @@ export function Body({ searchTerm }) {
       );
       setActiveCards(filteredCards);
       setActiveFilter("Todas as Ferramentas");
+      setActiveFilterId("todasAsFerramentas"); // Atualiza o ID do filtro ativo
       setVisibleCards(4); // Reset visible cards count
     } else {
       setActiveCards(allCards);
@@ -138,15 +138,16 @@ export function Body({ searchTerm }) {
               />
             </>
           )}
-          
         </div>
-        <button
-          onClick={clearFavorites}
-          className="bg-white border border-red-600 hover:bg-red-600 hover:text-white text-red-600 flex gap-2 items-center align-middle font-bold py-2 px-4 rounded-full mt-6 ml-[20%] xs400:ml-[45%] transition-all duration-300 ease-in-out"
-        >
-          <Trash size={24}/>
-        Limpar Favoritos
-        </button>
+        {activeFilterId === "favoritos" && (
+          <button
+            onClick={clearFavorites}
+            className="bg-white border border-red-600 hover:bg-red-600 hover:text-white text-red-600 flex gap-2 items-center align-middle font-bold py-2 px-4 rounded-full mt-6 ml-[20%] xs400:ml-[45%] transition-all duration-300 ease-in-out"
+          >
+            <Trash size={24}/>
+            Limpar Favoritos
+          </button>
+        )}
       </div>
       <div className="flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
         {activeCards.length === 0 ? (
