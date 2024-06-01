@@ -6,7 +6,7 @@ import { filterData } from "../utils/data/filter";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { cards } from "../utils/data/cards";
-import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { CaretLeft, CaretRight, Trash } from "@phosphor-icons/react";
 import { FaTrash } from "react-icons/fa";
 
 function Arrow(props) {
@@ -142,9 +142,10 @@ export function Body({ searchTerm }) {
         </div>
         <button
           onClick={clearFavorites}
-          className="bg-red-600 hover:bg-red-500 text-white flex gap-2 items-center align-middle font-bold py-2 px-4 rounded mt-6 ml-[45%]"
+          className="bg-white border border-red-600 hover:bg-red-600 hover:text-white text-red-600 flex gap-2 items-center align-middle font-bold py-2 px-4 rounded-full mt-6 ml-[20%] xs400:ml-[45%] transition-all duration-300 ease-in-out"
         >
-          <FaTrash size={'1.1rem'} className="text-white"/>Limpar Favoritos
+          <Trash size={24}/>
+        Limpar Favoritos
         </button>
       </div>
       <div className="flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
@@ -168,7 +169,7 @@ export function Body({ searchTerm }) {
         <div className="flex justify-center mt-4">
           <button
             onClick={loadMoreCards}
-            className="bg-primary cursor-pointer w-full mx-[20%] mb-4 text-white font-bold py-2 px-4 rounded"
+            className="text-xl text-center py-3 px-20 border-solid border-2 border-secondary rounded-full flex items-center gap-2 max-w-80 text-secondary font-[600] hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-500 ease-in-out mb-7"
           >
             Ver Mais
           </button>

@@ -49,7 +49,7 @@ export function Card({ title, description, image, favorite, link, category }) {
                 </p>
             </div>
             <div data-testid="card_botao" className="flex justify-center items-center mt-auto">
-                <a data-testid="card_botao_link" href={link} target="_blank" className="flex gap-4 bg-secondary hover:bg-white hover:cursor-pointer hover:text-secondary hover:border hover:border-secondary text-white font-bold py-2 px-5 xs400:px-10 rounded-tr-3xl rounded-bl-2xl transition-all duration-300 ease-in-out">
+                <a data-testid="card_botao_link" href={link} target="_blank" className="flex gap-4 bg-secondary hover:bg-white hover:cursor-pointer hover:text-secondary border hover:border-secondary text-white font-bold py-2 px-5 xs400:px-10 rounded-tr-3xl rounded-bl-2xl transition-all duration-300 ease-in-out">
                     Acesse aqui
                     <ArrowRight size={24} />
                 </a>
