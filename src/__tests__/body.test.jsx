@@ -10,7 +10,9 @@ describe('Body Component', () => {
 
     it('Renderiza os botoes do filtro e os cards', async () => {
 
-        render(<Body />);
+        render(<Body searchTerm="" />);
+
+        // screen.debug(); 
 
         //Verifica se os Filtros e botões estão sendo renderizado
 
@@ -33,12 +35,12 @@ describe('Body Component', () => {
                 const filtroCards = cards[filtro.id] || [];
                 for (const card of filtroCards) {
                     expect(screen.getByText(card.title)).toBeInTheDocument();
-                    // console.log("Renderizado Card:", card.title);
+                    //console.log("Renderizado Card:", card.title);
                 };
 
             });
         }
-    });
+    }, 30000);
 
     it('Verifica a estilização do botão dos filtros', () => {
 

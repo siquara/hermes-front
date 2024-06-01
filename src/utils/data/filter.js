@@ -4,6 +4,10 @@ export const filterData = [
         "id": "todasAsFerramentas"
     },
     {
+        "title": "Seus Favoritados",
+        "id": "favoritos"
+    },
+    {
         "title": "Gerenciamento de Projeto",
         "id": "gerenciamentoDeProjeto"
     },
