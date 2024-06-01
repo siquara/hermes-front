@@ -1,5 +1,9 @@
 export const filterData = [
     {
+        "title": "Todas as Ferramentas",
+        "id": "todasAsFerramentas"
+    },
+    {
         "title": "Gerenciamento de Projeto",
         "id": "gerenciamentoDeProjeto"
     },
