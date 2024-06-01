@@ -6,7 +6,9 @@ import { filterData } from "../utils/data/filter";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { cards } from "../utils/data/cards";
-import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { CaretLeft, CaretRight, Trash } from "@phosphor-icons/react";
+
+const isTest = process.env.NODE_ENV === 'test';
 
 function Arrow(props) {
   const disabled = props.disabled ? " arrow--disabled" : "";
@@ -25,6 +27,11 @@ function Arrow(props) {
   );
 }
 
+function clearFavorites() {
+  localStorage.removeItem('favorites');
+  window.location.reload();
+}
+
 const allCards = [];
 for (let category in cards) {
   const categoryObject = filterData.find(filter => filter.id === category);
@@ -37,8 +44,8 @@ for (let category in cards) {
 allCards.sort((a, b) => a.title.localeCompare(b.title));
 
 export function Body({ searchTerm }) {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: false,
     mode: "snap",
@@ -48,26 +55,38 @@ export function Body({ searchTerm }) {
     },
     initial: 0,
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+      setCurrentSlide(slider.track.details.rel);
     },
     created() {
-      setLoaded(true)
+      setLoaded(true);
     },
   });
 
-  const [activeFilter, setActiveFilter] = React.useState(filterData[0].title);
-  const [activeCards, setActiveCards] = React.useState(allCards);
+  const [activeFilter, setActiveFilter] = useState(filterData[0].title);
+  const [activeFilterId, setActiveFilterId] = useState(filterData[0].id); // Adiciona estado para o ID do filtro ativo
+  const [activeCards, setActiveCards] = useState(allCards);
+  const [visibleCards, setVisibleCards] = useState(isTest ? allCards.length : 4);
 
   function handleChangeActiveCard(filter) {
+    setActiveFilter(filter.title);
+    setActiveFilterId(filter.id); // Atualiza o ID do filtro ativo
     if (filter.id === "todasAsFerramentas") {
-      setActiveFilter(filter.title)
-      setActiveCards(allCards)
+      setActiveCards(allCards);
+      setVisibleCards(isTest ? allCards.length : 4);
+    } else if (filter.id === "favoritos") {
+      const favoriteTitles = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')).map(card => card.title) : [];
+      const favoriteCards = allCards.filter(card => favoriteTitles.includes(card.title));
+      setActiveCards(favoriteCards);
+      setVisibleCards(isTest ? allCards.length : 4);
     } else {
-      setActiveFilter(filter.title)
       setActiveCards(cards[filter.id]);
+      setVisibleCards(isTest ? cards[filter.id].length : 4); 
     }
   }
 
+  function loadMoreCards() {
+    setVisibleCards(prevVisibleCards => prevVisibleCards + 4);
+  }
 
   useEffect(() => {
     if (typeof searchTerm !== "undefined" && searchTerm !== "") {
@@ -76,14 +95,17 @@ export function Body({ searchTerm }) {
       );
       setActiveCards(filteredCards);
       setActiveFilter("Todas as Ferramentas");
+      setActiveFilterId("todasAsFerramentas"); // Atualiza o ID do filtro ativo
+      setVisibleCards(isTest ? filteredCards.length : 4); // Mostra todos os cards em modo de teste
     } else {
       setActiveCards(allCards);
+      setVisibleCards(isTest ? allCards.length : 4); // Mostra todos os cards em modo de teste
     }
   }, [searchTerm]);
 
   return (
     <div className="bg-white relative">
-      <div className="navigation-wrapper z-10 transform -translate-y-[40px]">
+      <div className="navigation-wrapper z-10 transform -translate-y-[40px] flex items-center align-middle flex-col">
         <div ref={sliderRef} className="keen-slider w-full overflow-hidden">
           {filterData.map((filter, index) => (
             <div key={index} className="keen-slider__slide min-w-fit max-w-fit">
@@ -96,7 +118,7 @@ export function Body({ searchTerm }) {
             </div>
           ))}
         </div>
-        <div className="flex gap-10 items-center justify-center">
+        <div className="flex gap-10 items-center align-middle justify-center">
           {loaded && instanceRef.current && (
             <>
               <Arrow
@@ -119,12 +141,21 @@ export function Body({ searchTerm }) {
             </>
           )}
         </div>
+        {activeFilterId === "favoritos" && (
+          <button
+            onClick={clearFavorites}
+            className="bg-white border border-red-600 hover:bg-red-600 hover:text-white text-red-600 flex gap-2 items-center align-middle font-bold py-2 px-4 rounded-full mt-6 ml-[20%] xs400:ml-[45%] transition-all duration-300 ease-in-out"
+          >
+            <Trash size={24}/>
+            Limpar Favoritos
+          </button>
+        )}
       </div>
       <div className="flex flex-wrap gap-10 justify-center mx-auto max-w-7xl px-6">
         {activeCards.length === 0 ? (
           <div className="font-[600] flex items-center justify-center break-words h-[80px] px-[45px] mx-[7px] my-[2rem] text-[2rem] text-secondary">Ferramenta não encontrada</div>
         ) : (
-          activeCards.map((card, index) => (
+          activeCards.slice(0, visibleCards).map((card, index) => (
             <Card
               key={index}
               title={card.title}
@@ -132,10 +163,21 @@ export function Body({ searchTerm }) {
               image={card.image}
               link={card.link}
               category={card.category}
+              favorite={card.favorite || false} // Passa o valor de favorite para o Card
             />
           ))
         )}
       </div>
+      {visibleCards < activeCards.length && (
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={loadMoreCards}
+            className="text-xl text-center py-3 px-20 border-solid border-2 border-secondary rounded-full flex items-center gap-2 max-w-80 text-secondary font-[600] hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-500 ease-in-out mb-7"
+          >
+            Ver Mais
+          </button>
+        </div>
+      )}
     </div>
   );
 }
