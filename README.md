@@ -9,14 +9,51 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
 
 ![My Skills](https://skillicons.dev/icons?i=js,visualstudio,git,github,jest,react,figma)
 
-## Configuração do Projeto
-Para executar este projeto localmente, siga os passos abaixo:
-1. Acesse o link https://hermesfacs.vercel.app/
+🌐 **Homepage:**  
+[Hermes Front](https://hermesfacs.vercel.app)
 
+## 📂 Estrutura do Projeto
 
+### 📁 src/
+- **index.js:** Ponto de entrada principal da aplicação.
+- **App.js:** Componente principal que gerencia a estrutura da aplicação.
+- **components/:** Contém todos os componentes reutilizáveis da interface.
+- **pages/:** Contém as páginas principais da aplicação.
+- **services/:** Serviços para comunicação com APIs externas.
+- **styles/:** Arquivos de estilo CSS.
 
-## Estrutura do Código
+### 📁 public/
+- **index.html:** Arquivo HTML principal.
+- **favicon.ico:** Ícone do site.
 
-- `index.html`: Contém a estrutura HTML da página, que configura a página com um estilo visual moderno e responsivo, adequado para dispositivos móveis.
+### 📁 config/
+- **webpack.config.js:** Configurações do Webpack para build e desenvolvimento.
 
-- `main.jsx`: 
+### 📁 tests/
+- **App.test.js:** Testes unitários para o componente App.
+
+## 🚀 Instruções para Execução
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/siquara/hermes-front.git
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   cd hermes-front
+   npm install
+   ```
+
+3. **Execute a aplicação:**
+   ```bash
+   npm start
+   ```
+
+4. **Acesse no navegador:**
+   ```
+   http://localhost:3000
+   ```
+
+## 📄 Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
