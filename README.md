@@ -55,5 +55,3 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
    http://localhost:3000
    ```
 
-## 📄 Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
