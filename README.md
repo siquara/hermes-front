@@ -10,27 +10,23 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
 ![My Skills](https://skillicons.dev/icons?i=js,react,jest,tailwind,vite,vscode,git,github,githubactions,figma)
 
 ## 🌐 **Homepage:**  
-[Hermes Front](https://hermesfacs.vercel.app)
+[Hermes Search](https://hermesfacs.vercel.app)
 
 ## 📂 Estrutura do Projeto
 
 ### 📁 src/
-- **index.js:** Ponto de entrada principal da aplicação.
-- **App.js:** Componente principal que gerencia a estrutura da aplicação.
+- **main.jsx:** Ponto de entrada principal da aplicação.
+- **App.jsx:** Componente principal que gerencia a estrutura da aplicação.
+- **_mocks_:** Mocks dos testes.
+- **tests/:** Testes unitários da aplicação
 - **components/:** Contém todos os componentes reutilizáveis da interface.
-- **pages/:** Contém as páginas principais da aplicação.
-- **services/:** Serviços para comunicação com APIs externas.
-- **styles/:** Arquivos de estilo CSS.
+- **style/:** Arquivos de estilo CSS.
+- **utils/data:** Banco de dados não relacional da aplicação.
 
+  
 ### 📁 public/
-- **index.html:** Arquivo HTML principal.
-- **favicon.ico:** Ícone do site.
-
-### 📁 config/
-- **webpack.config.js:** Configurações do Webpack para build e desenvolvimento.
-
-### 📁 tests/
-- **App.test.js:** Testes unitários para o componente App.
+- **assets:** Variações da logo do site.
+- **Ícones do site.**
 
 ## 🚀 Instruções para Execução
 
