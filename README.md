@@ -7,9 +7,9 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
 
 ## Tecnologias Utilizadas
 
-![My Skills](https://skillicons.dev/icons?i=js,visualstudio,git,github,jest,react,figma)
+![My Skills](https://skillicons.dev/icons?i=js,react,jest,tailwind,vite,vscode,git,github,githubactions,figma)
 
-🌐 **Homepage:**  
+## 🌐 **Homepage:**  
 [Hermes Front](https://hermesfacs.vercel.app)
 
 ## 📂 Estrutura do Projeto
@@ -47,11 +47,11 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
 
 3. **Execute a aplicação:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. **Acesse no navegador:**
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
 
