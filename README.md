@@ -25,7 +25,7 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
 
   
 ### 📁 public/
-- **assets:** Variações da logo do site.
+- **assets/:** Variações da logo do site.
 - **Ícones do site.**
 
 ## 🚀 Instruções para Execução
