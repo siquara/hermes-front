@@ -9,8 +9,12 @@ Nosso site facilita a localização da ferramenta de desenvolvimento perfeita. C
 
 ![My Skills](https://skillicons.dev/icons?i=js,react,jest,tailwind,vite,vscode,git,github,githubactions,figma)
 
-## 🌐 **Homepage:**  
-[Hermes Search](https://hermesfacs.vercel.app)
+## 🔗 **Link Úteis:**  
+- 🌐 WebSite: [Clique Aqui](https://hermesfacs.vercel.app)
+- 📚 GitBook: [Clique Aqui](https://hermes-search.gitbook.io/hermes-search)
+- 🖥️ Repositório: [Clique Aqui](https://github.com/siquara/hermes-front)
+- 🌟 Figma: [Clique Aqui](https://www.figma.com/design/FsXb7vu8uYfQB5IAPkKzNP/Projeto-A3-2024.1?node-id=0-1&t=sbrrBHcfktLKXX6Y-1)
+- 🕵️ GTmetrix: [Clique Aqui](https://gtmetrix.com/reports/hermesfacs.vercel.app/4P0ssPFw/)
 
 ## 📂 Estrutura do Projeto
 
