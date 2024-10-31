@@ -3,7 +3,6 @@ import { MagnifyingGlass } from "@phosphor-icons/react";
 import HeroWoman from "/HeroWoman.png";
 import React from "react"
 
-// xs400:pt-[8rem] md:pt-[15rem] lg:pt-0
 export function Hero({ searchTerm, setSearchTerm }) {
   return (
     <div className="hero h-[calc(100vh-50px)] bg-[url('/HeroImage.png')] bg-no-repeat bg-cover flex items-center">
